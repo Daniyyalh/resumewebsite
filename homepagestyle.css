@@ -19,7 +19,9 @@
         font-family: monospace;
         text-align: center;
     }
- 
+body{
+    padding-top: 4%;
+}
     #navbar {
     list-style-type:none;
     
@@ -53,8 +55,11 @@
         text-align: center;
     
 }
-#navbar li:hover, li:active{
-    background-color: bisque;
+.navbar-nav > li{
+  padding-left:30px;
+  padding-right:30px;
+  //margin-left : 15%;
+  //margin-right : 15%;
 }
 
     li.barwords{
@@ -116,12 +121,15 @@
 }
 
 #links{
+    padding-top: 5%;
     height: 12px;
 }
 #projects{
+    padding-top: 15%
     height: 12px;
 }
-#education{
+#Education{
+    padding-top: 60%
     height: 12px;
 }
     

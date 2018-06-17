@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-    </script>
-        <script>
-            $(document).ready(function () {
-                $("#button1").click(function () {
-                    var x = $("#education").position(); //gets the position of the div element...
-                    window.scrollTo(x.left, x.top); //window.scrollTo() scrolls the page upto certain position....
-                    //it takes 2 parameters : (x axis cordinate, y axis cordinate);
-                });
-            });
-            </script>
-    
+   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="homepagestyle.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     
-    <head> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
-    <link href="homepagestyle.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+       
+       <script>$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+       </script>
+       
+    <script> $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+    $('html, body').animate({
+        scrollTop: $($.attr(this, 'href')).offset().top - 100
+    }, 500);
+});</script> 
+       
+    </head>
     
+      <body>
     <nav id="new-navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -41,29 +48,16 @@
   </div>
 </nav>
     
-    <div data-spy="scroll" data-target="#new-navbar" data-offset="0">
-        <h4 id="Education">Education</h4>
-        <p>...</p>
-        
+    <div data-spy="scroll" data-target="#new-navbar" data-offset="0" class="scrollspy-example">
     </div>
-    <!--
-    <div id="navbar">
-        <ul>
-        <li> <a href="#about" >About</a></li>
-        <li> <a href="#links"> Links</a> </li>
-        <li> <a href="#projects"> Projects</a></li>
-        <li> <a href="#education"> Education</a> </li>
-        
-        </ul>
-    </div>
-    -->
-    <div id="name">
+    
+    <div id="real-name">
     <h1 class="name"> Daniyyal Hasan </h1>
     <h2 id="name-pronounce"> (Pronounced "Daniel Hahs-ah-n)</h2>
 
     </div>
     <div id="whole">
-        <hr>
+        
      <div id="about" > </div>
         <p class="sub-header"> About / Skills</p>
 <body>
@@ -73,18 +67,18 @@
         
         <p> So far, I've programmed in these languages:</p>
         <ul id="menu">
-            <li> <img src=http://www.ozassignments.com/wp-content/uploads/2013/07/python-programming-assignment-help.png alt="Python" height=80 width=150 title="Python"> </li>
-            <li> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHUOMFrvehzyC8EhXeWf1_M-gAFJ-I6u0ZnF0KY6FyDtXL1gJL" alt="Java" height=80 width=150 title="Java"> </li>
-            <li> <img src="http://www.circuitbasics.com/wp-content/uploads/2015/12/C-Programming.png" alt="C" height=80 width=150 title="C"> </li>
-            <li> <img src="http://www.freshwebonline.co.uk/wp-content/uploads/html5-it.gif" alt="HTML/CSS" height=80 width=150 title="HTML 5 and CSS 3"></li>
+            <li ><img src=http://www.ozassignments.com/wp-content/uploads/2013/07/python-programming-assignment-help.png alt="Python" height=80 width=150 data-toggle="tooltip" title="Python"> </li>
+            <li> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHUOMFrvehzyC8EhXeWf1_M-gAFJ-I6u0ZnF0KY6FyDtXL1gJL" alt="Java" height=80 width=150 data-toggle="tooltip" title="Java"> </li>
+            <li> <img src="http://www.circuitbasics.com/wp-content/uploads/2015/12/C-Programming.png" data-toggle="tooltip" alt="C" height=80 width=150 title="C"> </li>
+            <li> <img src="http://www.freshwebonline.co.uk/wp-content/uploads/html5-it.gif" data-toggle="tooltip" alt="HTML/CSS" height=80 width=150 title="HTML 5 and CSS 3"></li>
         </ul>
         
-        <p> And have used the following software to help me out:</p>
+        <p> I have also used the following software to help me out:</p>
         
         <ul id="menu">
-        <li> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqXPv7LMBlveTSOEfyzPllhrK8DLY957D0RIMucvr-jtoiuXRwbA" alt="Visual Studio Code" height=80 width=150 title="Microsoft Visual Studio Code"></li>
-        <li> <img src="https://cdn-images-1.medium.com/max/500/1*2Nn-kOZZEnAFvmLZZ47Scg.png" alt="Eclipse Oxygen" height="80" width="150" title="Eclipse Oxygen"> </li>
-        <li> <img src="http://shijuvarghese.com/wp-content/uploads/2018/03/git-logo.png" alt="Git" height=100 width=150 title="Git"> </li>
+        <li> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqXPv7LMBlveTSOEfyzPllhrK8DLY957D0RIMucvr-jtoiuXRwbA" alt="Visual Studio Code" data-toggle="tooltip" height=80 width=150 title="Microsoft Visual Studio Code"></li>
+        <li> <img src="https://cdn-images-1.medium.com/max/500/1*2Nn-kOZZEnAFvmLZZ47Scg.png" alt="Eclipse Oxygen" height="80" width="150" data-toggle="tooltip" aria-atomic=""title="Eclipse Oxygen"> </li>
+        <li> <img src="http://shijuvarghese.com/wp-content/uploads/2018/03/git-logo.png" data-toggle="tooltip" alt="Git" height=100 width=150 title="Git"> </li>
         
         </ul>
         </div>
@@ -97,31 +91,76 @@
         <p> Click on any you wish to see</p>
         
         <ul id="menu">
-        <li><a href=https://github.com/Daniyyalh target="_blank" title="Github"> <img src="https://assets-cdn.github.com/images/modules/open_graph/github-logo.png" alt="Github" height="80" width="100"> </a></li>
+        <li><a href="https://github.com/Daniyyalh" target="_blank" data-toggle="tooltip" class="tip-top" title="Github"> <img src="https://assets-cdn.github.com/images/modules/open_graph/github-logo.png" data-toggle="tooltip" alt="Github" height="80" width="100"> </a></li>
         
-        <li><a href=https://www.linkedin.com/in/daniyyal-hasan-983575138 target="_blank" title="LinkedIn"> <img src="https://yt3.ggpht.com/a-/AJLlDp0mRnZ39CP7Z0TUWTkjT5WckBX8fB4BTfMAMg=s900-mo-c-c0xffffffff-rj-k-no" alt="Github" height="80" width="100"> </a></li>
+        <li><a href=https://www.linkedin.com/in/daniyyal-hasan-983575138 target="_blank" data-toggle="tooltip" title="LinkedIn"> <img src="https://yt3.ggpht.com/a-/AJLlDp0mRnZ39CP7Z0TUWTkjT5WckBX8fB4BTfMAMg=s900-mo-c-c0xffffffff-rj-k-no" alt="Github" height="80" width="100"> </a></li>
         
         <!-- replace with link to resume -->
-        <li><a href="google.ca"><img src="http://www.cv-resume.org/images/logo_background.png" target="_blank" title="CV" alt="CV" height="80" width="100"></a></li>
+        <li><a href="google.ca"><img src="http://www.cv-resume.org/images/logo_background.png" target="_blank" title="CV" alt="CV" height="80" width="100" data-toggle="tooltip"></a></li>
         </ul>
-        <hr>
-        </div>
         
+        </div>
+        <hr>
         <div id="projects" > </div>
         <div id="Projects">
         <p class="sub-header"> Projects </p>
         
-        <p> Code for these projects can be viewed on Github, which can be accessed under <b> Links </b> option in the navigation bar. Code for projects listed with the title in <span style="color: darkcyan"> Dark Cyan </span> colour cannot be shown publically since they are school assignments which may be reused. </p>
-        
-        <p class="project-title"> Max/Min Finder</p>
-        <p class="project-title"> Paint program </p>
+        <p> Here are a few Projects I've completed. To view them in more detail and see pictures, click on <b> Detailed Description</b> on the card. Some Projects code cannot be viewed since they are school projects and may be reused in later years. </p>
+           
+     <div class="card-deck">
+         
+    <div class="card" style="Width: 10rem;">
+    <img class="card-img-top" src="https://image.freepik.com/free-icon/whatsapp-logo_318-49685.jpg" height="80" width="30" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Marks Keeper</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="btn-toolbar">
+    <a href="#education" class="btn btn-primary btn-sm btn-space btn-block" role="button">Detailed Description</a>
+    <a href="https://github.com/Daniyyalh/StudentMarks" class="btn btn-primary btn-sm btn-space btn-block" target="_blank">See Code</a>
+  
+        </div>
+  </div>
+        </div>
+         
+    <div class="card" style="Width: 13rem;">
+    <img class="card-img-top" src="https://image.freepik.com/free-icon/whatsapp-logo_318-49685.jpg" height="80" width="20" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Country Lookup</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="btn-toolbar">
+    <a href="#" class="btn btn-primary btn-sm btn-space btn-block">Detailed Description</a>
+    <a href="#" class="btn btn-primary btn-sm btn-space btn-block">See Code</a>
+        </div>
+    </div>
+         </div>
+         
+         <div class="card" style="Width: 13rem;">
+    <img class="card-img-top" src="https://image.freepik.com/free-icon/whatsapp-logo_318-49685.jpg" height="190" width="20" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Max/Min Finder</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="btn-toolbar">
+    <a href="#" class="btn btn-primary btn-sm btn-space btn-block">Detailed Description</a>
+    <a href="https://github.com/Daniyyalh/Local-max-min" class="btn btn-primary btn-sm btn-space btn-block">See Code</a>
+        </div>
+    </div>
+         </div>
+         
+         <div class="card" data-toggle="buttons" style="Width: 13rem;">
+    <img class="card-img-top" src="https://image.freepik.com/free-icon/whatsapp-logo_318-49685.jpg" height="80" width="20" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">Paint Program</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="btn-toolbar">
+    <a href="#" class="btn btn-primary btn-sm btn-space btn-block">Detailed Description</a>
+    <a href="#" class="btn btn-secondary btn-sm btn-space btn-block" disabled="disabled">See Code</a>
+        <p class="card-text"><small class="text-muted">This is a School Project so the Code Cannot be Shown</small></p>
+        </div>
+    </div>
+         </div>
             
         </div>
-        
-        <!--<p class="sub-header"><a href="www.googlePictures.com"> See what Pictures I've taken!</a></p>
-        -->
-        
-        
+      
         <hr>
         
         <div id="education" > </div>
@@ -137,7 +176,7 @@
         <p><b>STA304</b>: Surveys, Sampling and Observational Data</p>
         
         
-        <p style="padding-bottom: 0.3cm;padding-top: 0.3cm"> And am taking these courses next semester: </p>
+        <p style="padding-bottom: 0.3cm;padding-top: 0.3cm"> And I plan on taking these courses next semester: </p>
         <p><b>CSC301</b>: Introduction to Software Engineering</p>
         <p><b>CSC384</b>: Introduction to Artificial Intelligence</p>
         <p><b>CSC309</b>: Programming on the Web</p>
@@ -148,11 +187,16 @@
             
         <p style="padding-bottom: 0.3cm;padding-top: 0.3cm"> These are some of the course I have completed: </p>
         
-        
-        
-        <p>Software Design, Data Structures and Analysis, Systems Programming, Probability and Statistics 1</p>                                                                                                                     
+        <p>Software Design, Data Structures and Analysis, Systems Programming, Probability and Statistics 1</p>   
+            
+            
         </div>
     </body>
-        <a href="#name"> Back to top</a>
-    </div>
+        <a href="#real-name"> Back to top</a>
+    
+    
+    
+    
+    
+    
 </html>

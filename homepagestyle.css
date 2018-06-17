@@ -1,21 +1,40 @@
+hr {
+    border: none;
+    height: 1px;
+    /* Set the hr color */
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+}
 
-    #name{
-        font-size: 40px;
+/*.card {
+    display:inline-block;
+}*/
+.btn-space {
+    margin-right: 10px;
+    margin-left: 0px;
+    margin-top: 10px;
+}
+
+.btn{
+    text-align: center;
+    
+}
+    #real-name{
+        font-size: 80px;
         font-family: monospace;   
         text-align: center;
         background-image: url("https://media-cdn.tripadvisor.com/media/photo-s/02/c4/4e/70/niagara-falls.jpg");
-        min-height: 0px;
         background-repeat: no-repeat;
         background-size: cover;
-        min-height: 570px;
+        min-height: 570px; /* 570px*/
         height: auto;
         top: 0px;
-        padding: 0px;
+        padding: 40px;
         margin: 0px;
         
     } 
     #name-pronounce{
-        font-size: 12px;
+        font-size: 18px;
         font-family: monospace;
         text-align: center;
     }
@@ -78,7 +97,7 @@ body{
     }
     
     #menu ul {
-    list-style: none;
+    /*list-style: none; */
     margin: 0;
     padding: 0;
     }
@@ -121,7 +140,7 @@ body{
 }
 
 #links{
-    padding-top: 5%;
+   /* padding-top: 5%; */
     height: 12px;
 }
 #projects{

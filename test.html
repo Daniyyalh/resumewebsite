@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+    <html>
+    <head>
+        <title>
+            Scroll upto Div with jQuery.
+        </title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>
+            $('html, body').animate({
+    scrollTop: $("#element").offset().top
+}, 1000);
+            </script>
+    </head>
+    <body>
+        <button id="button1">
+            Click here to scroll
+        </button>
+
+        <div id="element" style="position:absolute;top:200%;left:0%;background-color:orange;height:100px;width:200px;">
+            The DIV element.
+            </div>
+        </body>
+    </html>

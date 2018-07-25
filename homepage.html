@@ -19,7 +19,7 @@
     <script> $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
     $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top - 100
+        scrollTop: $($.attr(this, 'href')).offset().top - 90
     }, 500);
 });</script> 
        
@@ -110,25 +110,26 @@
      <div class="card-deck">
          
     <div class="card" style="Width: 10rem;">
-    <img class="card-img-top" src="https://image.freepik.com/free-icon/whatsapp-logo_318-49685.jpg" height="80" width="30" alt="Card image cap">
+    <img class="card-img-top" src="markskeeperlogo.png" height="130" width="30" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Marks Keeper</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">This Program allows a user to view, edit and record course marks recieved from school. A password is required to view marks and all marks entered are encrypted.</p>
     <div class="btn-toolbar">
-    <a href="#education" class="btn btn-primary btn-sm btn-space btn-block" role="button">Detailed Description</a>
+    <button type="button" class="btn btn-primary btn-sm btn-space btn-block" data-toggle="modal" data-target="#markModal">Detailed Description</button>
     <a href="https://github.com/Daniyyalh/StudentMarks" class="btn btn-primary btn-sm btn-space btn-block" target="_blank">See Code</a>
-  
         </div>
   </div>
         </div>
          
+         
+         
     <div class="card" style="Width: 13rem;">
-    <img class="card-img-top" src="https://image.freepik.com/free-icon/whatsapp-logo_318-49685.jpg" height="80" width="20" alt="Card image cap">
+    <img class="card-img-top" src="linksloader.PNG" height="80" width="20" alt="Card image cap">
   <div class="card-body">
-    <h5 class="card-title">Country Lookup</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <h5 class="card-title">Links Loader</h5>
+    <p class="card-text">Google Chrome extension which allows the user to group links they visit frequently and load several of them at once.</p>
     <div class="btn-toolbar">
-    <a href="#" class="btn btn-primary btn-sm btn-space btn-block">Detailed Description</a>
+    <button type="button" class="btn btn-primary btn-sm btn-space btn-block" data-toggle="modal" data-target="#countryModal">Detailed Description</button>
     <a href="#" class="btn btn-primary btn-sm btn-space btn-block">See Code</a>
         </div>
     </div>
@@ -138,10 +139,11 @@
     <img class="card-img-top" src="https://image.freepik.com/free-icon/whatsapp-logo_318-49685.jpg" height="190" width="20" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Max/Min Finder</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">This program finds the local maximum and minimum in an Excel file.</p>
     <div class="btn-toolbar">
-    <a href="#" class="btn btn-primary btn-sm btn-space btn-block">Detailed Description</a>
-    <a href="https://github.com/Daniyyalh/Local-max-min" class="btn btn-primary btn-sm btn-space btn-block">See Code</a>
+    <button type="button" class="btn btn-primary btn-sm btn-space btn-block" data-toggle="modal" data-target="#maxModal">Detailed Description</button>
+    <a href="https://github.com/Daniyyalh/Local-max-min" target="_blank" class="btn btn-primary btn-sm btn-space btn-block">See Code</a>
+    
         </div>
     </div>
          </div>
@@ -150,9 +152,9 @@
     <img class="card-img-top" src="https://image.freepik.com/free-icon/whatsapp-logo_318-49685.jpg" height="80" width="20" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">Paint Program</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text">This program is a much simpler version of Microsoft Paint created using Java. It uses MVC architectural pattern and a few other design patterns.</p>
     <div class="btn-toolbar">
-    <a href="#" class="btn btn-primary btn-sm btn-space btn-block">Detailed Description</a>
+    <button type="button" class="btn btn-primary btn-sm btn-space btn-block" data-toggle="modal" data-target="#paintModal">Detailed Description</button>
     <a href="#" class="btn btn-secondary btn-sm btn-space btn-block" disabled="disabled">See Code</a>
         <p class="card-text"><small class="text-muted">This is a School Project so the Code Cannot be Shown</small></p>
         </div>
@@ -160,7 +162,83 @@
          </div>
             
         </div>
+            
+    <div class="modal fade" id="markModal" tabindex="-1" role="dialog" aria-labelledby="markModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Marks Keeper Description</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p> This program requires Python 3.6 and PyQt5 to run.</p>
+      </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+            
+            <div class="modal fade" id="countryModal" tabindex="-1" role="dialog" aria-labelledby="countryModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Links Loader Description</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Link to app in the chrome store: LINK
+      </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
       
+            <div class="modal fade" id="maxModal" tabindex="-1" role="dialog" aria-labelledby="maxModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Max/Min Finder Description</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+            
+            <div class="modal fade" id="paintModal" tabindex="-1" role="dialog" aria-labelledby="paintModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Paint Description</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqXPv7LMBlveTSOEfyzPllhrK8DLY957D0RIMucvr-jtoiuXRwbA" height="80" width="40">
+      </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
         <hr>
         
         <div id="education" > </div>
@@ -191,8 +269,12 @@
             
             
         </div>
-    </body>
+    
         <a href="#real-name"> Back to top</a>
+    </div>
+        </body>
+          </div>
+    </body>
     
     
     
